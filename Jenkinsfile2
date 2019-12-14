@@ -7,8 +7,7 @@ pipeline {
     environment {
         CC_NAME='Build machine for human'
     }
-    environment {
-        CC_NAME=('Dummy Stage'){
+    stages {
             steps{
                // if(isUnix()){
                     sh "echo '$CC_NAME'"
