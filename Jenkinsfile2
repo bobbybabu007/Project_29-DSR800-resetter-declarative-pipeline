@@ -8,12 +8,12 @@ pipeline {
     environment {
         CC_NAME=('Dummy Stage'){
             steps{
-                if(isUnix()){
+               // if(isUnix()){
                     sh "echo '$CC_NAME'"
-                }
-                 ifelse(isUnix()){
-                    sh "echo '!$CC_NAME'"
-                }
+                //}
+                 //ifelse(isUnix()){
+                   // sh "echo '!$CC_NAME'"
+                //}
             }
         }
         post{
