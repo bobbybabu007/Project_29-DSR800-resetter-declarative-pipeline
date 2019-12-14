@@ -1,0 +1,30 @@
+pipeline {
+    agent {
+        label: 'terminator'
+    }
+    environment {
+        CC_NAME='Build machine for human'
+    }
+    environment {
+        CC_NAME=('Dummy Stage'){
+            steps{
+                if(isUnix()){
+                    sh "echo '$CC_NAME'"
+                }
+                 ifelse(isUnix()){
+                    sh "echo '!$CC_NAME'"
+                }
+            }
+        }
+        post{
+            always{
+                sh "echo Hello WOrld"
+            }
+        }
+    }
+}
+post{
+    always{
+         sh "echo Hello WOrld"
+    }
+}
