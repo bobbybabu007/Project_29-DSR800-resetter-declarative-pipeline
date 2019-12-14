@@ -8,6 +8,7 @@ pipeline {
         CC_NAME='Build machine for human'
     }
     stages {
+        stage{
             steps{
                // if(isUnix()){
                     sh "echo '$CC_NAME'"
